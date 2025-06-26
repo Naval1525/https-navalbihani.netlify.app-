@@ -47,16 +47,25 @@ const Hero = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+      {/* Profile image */}
+      <div className="absolute top-20 right-10 w-32 h-32 rounded-full overflow-hidden border-4 border-gray-400 shadow-2xl z-10">
+        <img 
+          src="/placeholder.svg" 
+          alt="Naval Bihani" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+
       {/* Animated background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-20 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gray-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-gray-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-20 w-72 h-72 bg-gray-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"></div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="mb-8">
-          <div className="bg-black/40 backdrop-blur-md border border-green-400/30 rounded-lg p-6 font-mono text-left max-w-2xl mx-auto shadow-2xl">
+          <div className="bg-black/40 backdrop-blur-md border border-gray-400/30 rounded-lg p-6 font-mono text-left max-w-2xl mx-auto shadow-2xl">
             <div className="flex items-center mb-4">
               <div className="flex space-x-2">
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -80,7 +89,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+        <div className="text-6xl font-bold mb-6 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 bg-clip-text text-transparent">
           Naval Bihani
         </div>
         
@@ -93,11 +102,11 @@ const Hero = () => {
             <Code className="h-6 w-6" />
             <span>Full Stack</span>
           </div>
-          <div className="flex items-center space-x-2 text-blue-400">
+          <div className="flex items-center space-x-2 text-gray-400">
             <Database className="h-6 w-6" />
             <span>Backend Heavy</span>
           </div>
-          <div className="flex items-center space-x-2 text-purple-400">
+          <div className="flex items-center space-x-2 text-gray-500">
             <Cloud className="h-6 w-6" />
             <span>Cloud Native</span>
           </div>
@@ -105,7 +114,7 @@ const Hero = () => {
 
         <button
           onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-          className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-3 rounded-lg font-medium hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          className="bg-gradient-to-r from-gray-600 to-gray-800 text-white px-8 py-3 rounded-lg font-medium hover:from-gray-700 hover:to-gray-900 transition-all duration-300 transform hover:scale-105 shadow-lg"
         >
           Explore My Work
         </button>
