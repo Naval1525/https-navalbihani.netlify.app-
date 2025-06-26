@@ -44,7 +44,7 @@ const Index = () => {
       {/* CLI Toggle Button */}
       <button
         onClick={() => setShowCLI(!showCLI)}
-        className="fixed top-4 right-4 z-50 bg-gray-800/80 backdrop-blur-md border border-gray-600 rounded-lg p-2 hover:bg-gray-700/80 transition-all duration-300"
+        className="fixed top-3 right-14 z-50 bg-gray-800/80 backdrop-blur-md border border-gray-600 rounded-lg p-2 hover:bg-gray-700/80 transition-all duration-300"
       >
         <Terminal className="h-6 w-6 text-green-400" />
       </button>

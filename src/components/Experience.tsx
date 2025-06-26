@@ -1,4 +1,3 @@
-
 import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 
 const Experience = () => {
@@ -104,52 +103,57 @@ const Experience = () => {
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
-              <div key={index} className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                  <div className="bg-black/20 backdrop-blur-md border border-gray-600/30 rounded-lg p-6 hover:border-gray-500/40 transition-all duration-300 transform hover:scale-105">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-                      <div className={`w-4 h-4 bg-gradient-to-r ${exp.color} rounded-full`}></div>
-                    </div>
-                    <p className={`text-lg font-medium bg-gradient-to-r ${exp.color} bg-clip-text text-transparent mb-2`}>
-                      {exp.company}
-                    </p>
-                    <div className="flex items-center text-gray-400 text-sm mb-2">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      <span className="mr-4">{exp.duration}</span>
-                      <MapPin className="h-4 w-4 mr-1" />
-                      <span className="mr-2">{exp.location}</span>
-                      <span className="bg-gray-600/50 px-2 py-1 rounded text-xs">{exp.type}</span>
-                    </div>
-                    <p className="text-gray-300 mb-4 text-sm">{exp.description}</p>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Achievements:</h4>
-                      <ul className="text-xs text-gray-400 space-y-1">
-                        {exp.achievements.map((achievement, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="text-green-400 mr-2">•</span>
-                            {achievement}
-                          </li>
+              <div key={index} className="relative">
+                <div className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                  <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'} relative z-10`}>
+                    <div className="bg-black/20 backdrop-blur-md border border-gray-600/30 rounded-lg p-6 hover:border-gray-500/40 transition-all duration-300 transform hover:scale-105">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="text-xl font-bold text-white">{exp.role}</h3>
+                        <div className={`w-4 h-4 bg-gradient-to-r ${exp.color} rounded-full`}></div>
+                      </div>
+                      <p className={`text-lg font-medium bg-gradient-to-r ${exp.color} bg-clip-text text-transparent mb-2`}>
+                        {exp.company}
+                      </p>
+                      <div className="flex items-center text-gray-400 text-sm mb-2">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        <span className="mr-4">{exp.duration}</span>
+                        <MapPin className="h-4 w-4 mr-1" />
+                        <span className="mr-2">{exp.location}</span>
+                        <span className="bg-gray-600/50 px-2 py-1 rounded text-xs">{exp.type}</span>
+                      </div>
+                      <p className="text-gray-300 mb-4 text-sm">{exp.description}</p>
+                      
+                      <div className="mb-4">
+                        <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Achievements:</h4>
+                        <ul className="text-xs text-gray-400 space-y-1">
+                          {exp.achievements.map((achievement, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <span className="text-green-400 mr-2">•</span>
+                              {achievement}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="flex flex-wrap gap-2">
+                        {exp.technologies.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-2 py-1 bg-gradient-to-r from-gray-600/20 to-gray-500/20 text-gray-300 text-xs rounded-full border border-gray-600/30"
+                          >
+                            {tech}
+                          </span>
                         ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-2 py-1 bg-gradient-to-r from-gray-600/20 to-gray-500/20 text-gray-300 text-xs rounded-full border border-gray-600/30"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                      </div>
                     </div>
                   </div>
                 </div>
                 
                 {/* Timeline dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-green-400 to-purple-400 rounded-full border-4 border-slate-900"></div>
+                <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-gradient-to-r from-green-400 to-purple-400 rounded-full border-4 border-slate-900 z-10"></div>
+                
+                {/* Individual horizontal line for each card */}
+                <div className={`absolute top-1/2 transform -translate-y-1/2 h-0.5 ${index % 2 === 0 ? 'right-1/2 left-0' : 'left-1/2 right-0'} ${index % 2 === 0 ? 'bg-gradient-to-l from-green-400 to-transparent' : 'bg-gradient-to-r from-purple-400 to-transparent'} z-0`}></div>
               </div>
             ))}
           </div>

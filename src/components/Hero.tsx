@@ -47,8 +47,8 @@ const Hero = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Profile image */}
-      <div className="absolute top-20 right-10 w-32 h-32 rounded-full overflow-hidden border-4 border-gray-400 shadow-2xl z-10">
+      {/* Profile image - repositioned for better balance */}
+      <div className="absolute top-36 right-28 w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-gray-400 shadow-2xl z-10">
         <img 
           src="/lovable-uploads/fb7423ca-2a79-493f-b2f1-ab7b8bcfc319.png" 
           alt="Naval Bihani" 
