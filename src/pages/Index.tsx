@@ -1,24 +1,46 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Terminal } from 'lucide-react';
-import PersonalCard from '../components/PersonalCard';
-import AboutCard from '../components/AboutCard';
-import ExperienceCard from '../components/ExperienceCard';
-import LanguagesCard from '../components/LanguagesCard';
-import BackendCard from '../components/BackendCard';
-import DatabaseCard from '../components/DatabaseCard';
-import CloudCard from '../components/CloudCard';
-import ProjectsCard from '../components/ProjectsCard';
-import LeetCodeCard from '../components/LeetCodeCard';
-import ServicesCard from '../components/ServicesCard';
-import ContactCard from '../components/ContactCard';
+import Navigation from '../components/Navigation';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Experience from '../components/Experience';
+import Skills from '../components/Skills';
+import Projects from '../components/Projects';
+import LeetCodeStats from '../components/LeetCodeStats';
+import Services from '../components/Services';
+import Contact from '../components/Contact';
 import CLITerminal from '../components/CLITerminal';
 
 const Index = () => {
   const [showCLI, setShowCLI] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'experience', 'skills', 'projects', 'leetcode', 'services', 'contact'];
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white p-4">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+      {/* Navigation */}
+      <Navigation activeSection={activeSection} />
+
       {/* CLI Toggle Button */}
       <button
         onClick={() => setShowCLI(!showCLI)}
@@ -30,65 +52,38 @@ const Index = () => {
       {/* CLI Terminal */}
       {showCLI && <CLITerminal onClose={() => setShowCLI(false)} />}
 
-      {/* Bento Grid Layout */}
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 auto-rows-auto">
-          {/* Personal Card - Large */}
-          <div className="lg:col-span-2 lg:row-span-3">
-            <PersonalCard />
-          </div>
+      {/* Sections */}
+      <section id="home">
+        <Hero />
+      </section>
 
-          {/* About Card */}
-          <div className="lg:col-span-2 lg:row-span-2">
-            <AboutCard />
-          </div>
+      <section id="about">
+        <About />
+      </section>
 
-          {/* LeetCode Card */}
-          <div className="lg:col-span-2 lg:row-span-1">
-            <LeetCodeCard />
-          </div>
+      <section id="experience">
+        <Experience />
+      </section>
 
-          {/* Languages Card */}
-          <div className="lg:col-span-2 lg:row-span-2">
-            <LanguagesCard />
-          </div>
+      <section id="skills">
+        <Skills />
+      </section>
 
-          {/* Backend Card */}
-          <div className="lg:col-span-2 lg:row-span-1">
-            <BackendCard />
-          </div>
+      <section id="projects">
+        <Projects />
+      </section>
 
-          {/* Experience Card */}
-          <div className="lg:col-span-2 lg:row-span-2">
-            <ExperienceCard />
-          </div>
+      <section id="leetcode">
+        <LeetCodeStats />
+      </section>
 
-          {/* Database Card */}
-          <div className="lg:col-span-2 lg:row-span-1">
-            <DatabaseCard />
-          </div>
+      <section id="services">
+        <Services />
+      </section>
 
-          {/* Cloud Card */}
-          <div className="lg:col-span-2 lg:row-span-1">
-            <CloudCard />
-          </div>
-
-          {/* Projects Card - Large */}
-          <div className="lg:col-span-3 lg:row-span-2">
-            <ProjectsCard />
-          </div>
-
-          {/* Services Card */}
-          <div className="lg:col-span-1 lg:row-span-1">
-            <ServicesCard />
-          </div>
-
-          {/* Contact Card */}
-          <div className="lg:col-span-2 lg:row-span-1">
-            <ContactCard />
-          </div>
-        </div>
-      </div>
+      <section id="contact">
+        <Contact />
+      </section>
     </div>
   );
 };

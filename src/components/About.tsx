@@ -1,5 +1,5 @@
 
-import { GraduationCap, Code, Trophy } from 'lucide-react';
+import { GraduationCap, Code, Trophy, MapPin } from 'lucide-react';
 
 const About = () => {
   return (
@@ -15,55 +15,71 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              I'm a backend-heavy full stack developer currently pursuing Computer Science at 
-              Bennett University. Obsessed with distributed systems, cloud architecture, and 
-              optimizing performance.
+              I'm Naval Bihani, a passionate Full Stack Developer and Computer Science undergraduate 
+              at Bennett University with a CGPA of 9.3/10. I specialize in backend systems, cloud 
+              infrastructure, and scalable architecture, with hands-on experience across Golang, 
+              Node.js, Docker, and AWS.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              With experience at companies like Phoenix Labs, FSTONE, and Sapphire, I've built 
-              scalable systems handling thousands of users while maintaining clean architecture 
-              and optimal performance.
+              I've solved 700+ LeetCode problems (Rated 1800+) and have a deep interest in Data 
+              Structures & Algorithms, system design, and building real-time, performant applications. 
+              My experience spans across multiple internships where I've built scalable systems 
+              handling thousands of users.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              When I'm not coding, you'll find me solving algorithmic challenges on LeetCode 
-              or exploring the latest in cloud-native technologies.
+              I actively contribute to developer communities, lead teams in tech events, and 
+              constantly push boundaries through freelance projects, internships, and side hustles.
             </p>
           </div>
 
           <div className="space-y-6">
-            <div className="bg-black/20 backdrop-blur-md border border-purple-500/20 rounded-lg p-6 hover:border-purple-500/40 transition-all duration-300">
+            <div className="bg-black/20 backdrop-blur-md border border-gray-600/30 rounded-lg p-6 hover:border-gray-500/40 transition-all duration-300">
               <div className="flex items-center mb-4">
                 <GraduationCap className="h-8 w-8 text-green-400 mr-3" />
                 <h3 className="text-xl font-semibold">Education</h3>
               </div>
               <p className="text-gray-300">
                 <strong>Bennett University</strong><br />
-                Computer Science & Engineering<br />
-                Expected 2027
+                B.Tech Computer Science & Engineering<br />
+                CGPA: 9.3/10 | Expected 2027
               </p>
             </div>
 
-            <div className="bg-black/20 backdrop-blur-md border border-purple-500/20 rounded-lg p-6 hover:border-purple-500/40 transition-all duration-300">
+            <div className="bg-black/20 backdrop-blur-md border border-gray-600/30 rounded-lg p-6 hover:border-gray-500/40 transition-all duration-300">
               <div className="flex items-center mb-4">
                 <Code className="h-8 w-8 text-blue-400 mr-3" />
                 <h3 className="text-xl font-semibold">Specialization</h3>
               </div>
               <p className="text-gray-300">
-                Backend Systems, Cloud Architecture,<br />
-                Microservices, API Design,<br />
+                Backend System Design<br />
+                Cloud-Native Architecture<br />
+                Microservices Engineering<br />
                 Performance Optimization
               </p>
             </div>
 
-            <div className="bg-black/20 backdrop-blur-md border border-purple-500/20 rounded-lg p-6 hover:border-purple-500/40 transition-all duration-300">
+            <div className="bg-black/20 backdrop-blur-md border border-gray-600/30 rounded-lg p-6 hover:border-gray-500/40 transition-all duration-300">
               <div className="flex items-center mb-4">
                 <Trophy className="h-8 w-8 text-purple-400 mr-3" />
                 <h3 className="text-xl font-semibold">Achievements</h3>
               </div>
               <p className="text-gray-300">
                 700+ LeetCode Problems<br />
-                1800+ Rating<br />
+                1800+ Rating | Knight Badge<br />
+                Tech Lead - Alan Turing Club<br />
                 Multiple Production Systems
+              </p>
+            </div>
+
+            <div className="bg-black/20 backdrop-blur-md border border-gray-600/30 rounded-lg p-6 hover:border-gray-500/40 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <MapPin className="h-8 w-8 text-yellow-400 mr-3" />
+                <h3 className="text-xl font-semibold">Location</h3>
+              </div>
+              <p className="text-gray-300">
+                Hyderabad, India<br />
+                Remote Ready Worldwide<br />
+                Open to Relocation
               </p>
             </div>
           </div>

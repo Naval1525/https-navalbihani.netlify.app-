@@ -8,14 +8,14 @@ const Hero = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   const commands = [
-    '> hi',
-    'Hello, I\'m Naval. Welcome to my Dev Terminal.',
     '> whoami',
-    'Backend Engineer | Cloud Architect | Problem Solver',
-    '> skills --list',
-    'Golang • Node.js • AWS • Docker • React',
-    '> help',
-    '[about] [projects] [experience] [contact]'
+    'Naval Bihani - Full Stack Developer',
+    '> cat skills.txt',
+    'Backend Systems • Cloud Architecture • DSA Expert',
+    '> leetcode --stats',
+    '700+ Problems Solved | Rating: 1800+',
+    '> echo "Ready to build amazing things"',
+    'Let\'s create something extraordinary together!'
   ];
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const Hero = () => {
       {/* Profile image */}
       <div className="absolute top-20 right-10 w-32 h-32 rounded-full overflow-hidden border-4 border-gray-400 shadow-2xl z-10">
         <img 
-          src="/placeholder.svg" 
+          src="/lovable-uploads/fb7423ca-2a79-493f-b2f1-ab7b8bcfc319.png" 
           alt="Naval Bihani" 
           className="w-full h-full object-cover"
         />
@@ -93,14 +93,18 @@ const Hero = () => {
           Naval Bihani
         </div>
         
-        <div className="text-2xl text-gray-300 mb-8 font-light">
-          Building systems. Solving problems. Writing code.
+        <div className="text-2xl text-gray-300 mb-4 font-light">
+          Full Stack Developer | Backend Engineer | Cloud & DSA Specialist
+        </div>
+        
+        <div className="text-lg text-gray-400 mb-8">
+          Bennett University CS Student • CGPA: 9.3/10 • Expected 2027
         </div>
         
         <div className="flex justify-center space-x-8 mb-12">
           <div className="flex items-center space-x-2 text-green-400">
             <Code className="h-6 w-6" />
-            <span>Full Stack</span>
+            <span>700+ LeetCode</span>
           </div>
           <div className="flex items-center space-x-2 text-gray-400">
             <Database className="h-6 w-6" />
@@ -112,12 +116,20 @@ const Hero = () => {
           </div>
         </div>
 
-        <button
-          onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-          className="bg-gradient-to-r from-gray-600 to-gray-800 text-white px-8 py-3 rounded-lg font-medium hover:from-gray-700 hover:to-gray-900 transition-all duration-300 transform hover:scale-105 shadow-lg"
-        >
-          Explore My Work
-        </button>
+        <div className="flex justify-center space-x-4">
+          <button
+            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-gradient-to-r from-gray-600 to-gray-800 text-white px-8 py-3 rounded-lg font-medium hover:from-gray-700 hover:to-gray-900 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            View My Work
+          </button>
+          <button
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-medium hover:bg-gray-600 hover:text-white transition-all duration-300 transform hover:scale-105"
+          >
+            Get In Touch
+          </button>
+        </div>
       </div>
     </div>
   );
