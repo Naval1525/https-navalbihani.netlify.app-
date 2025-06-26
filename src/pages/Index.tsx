@@ -1,77 +1,76 @@
 
 import { useState, useEffect } from 'react';
-import { Terminal, Github, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Experience from '../components/Experience';
-import Skills from '../components/Skills';
-import Projects from '../components/Projects';
-import LeetCodeStats from '../components/LeetCodeStats';
-import Services from '../components/Services';
-import Contact from '../components/Contact';
-import Navigation from '../components/Navigation';
+import { Terminal } from 'lucide-react';
+import PersonalCard from '../components/PersonalCard';
+import AboutCard from '../components/AboutCard';
+import ExperienceCard from '../components/ExperienceCard';
+import SkillsCard from '../components/SkillsCard';
+import ProjectsCard from '../components/ProjectsCard';
+import LeetCodeCard from '../components/LeetCodeCard';
+import ServicesCard from '../components/ServicesCard';
+import ContactCard from '../components/ContactCard';
+import CLITerminal from '../components/CLITerminal';
 
 const Index = () => {
-  const [activeSection, setActiveSection] = useState('home');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'skills', 'projects', 'leetcode', 'services', 'contact'];
-      const scrollPosition = window.scrollY + 100;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-          
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [showCLI, setShowCLI] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-      <Navigation activeSection={activeSection} />
-      
-      <section id="home">
-        <Hero />
-      </section>
-      
-      <section id="about">
-        <About />
-      </section>
-      
-      <section id="experience">
-        <Experience />
-      </section>
-      
-      <section id="skills">
-        <Skills />
-      </section>
-      
-      <section id="projects">
-        <Projects />
-      </section>
-      
-      <section id="leetcode">
-        <LeetCodeStats />
-      </section>
-      
-      <section id="services">
-        <Services />
-      </section>
-      
-      <section id="contact">
-        <Contact />
-      </section>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white p-4">
+      {/* CLI Toggle Button */}
+      <button
+        onClick={() => setShowCLI(!showCLI)}
+        className="fixed top-4 right-4 z-50 bg-gray-800/80 backdrop-blur-md border border-gray-600 rounded-lg p-2 hover:bg-gray-700/80 transition-all duration-300"
+      >
+        <Terminal className="h-6 w-6 text-green-400" />
+      </button>
+
+      {/* CLI Terminal */}
+      {showCLI && <CLITerminal onClose={() => setShowCLI(false)} />}
+
+      {/* Bento Grid Layout */}
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-auto">
+          {/* Personal Card - Large */}
+          <div className="lg:col-span-2 lg:row-span-2">
+            <PersonalCard />
+          </div>
+
+          {/* About Card */}
+          <div className="lg:col-span-2">
+            <AboutCard />
+          </div>
+
+          {/* Skills Card */}
+          <div className="lg:col-span-1">
+            <SkillsCard />
+          </div>
+
+          {/* LeetCode Card */}
+          <div className="lg:col-span-1">
+            <LeetCodeCard />
+          </div>
+
+          {/* Experience Card - Wide */}
+          <div className="lg:col-span-3">
+            <ExperienceCard />
+          </div>
+
+          {/* Contact Card */}
+          <div className="lg:col-span-1 lg:row-span-2">
+            <ContactCard />
+          </div>
+
+          {/* Projects Card - Large */}
+          <div className="lg:col-span-2 lg:row-span-2">
+            <ProjectsCard />
+          </div>
+
+          {/* Services Card */}
+          <div className="lg:col-span-1">
+            <ServicesCard />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
