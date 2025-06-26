@@ -1,5 +1,5 @@
 
-import { MapPin, Mail, Phone, Github, Linkedin } from 'lucide-react';
+import { MapPin, Mail, Phone, Github, Linkedin, Code2 } from 'lucide-react';
 
 const PersonalCard = () => {
   return (
@@ -18,8 +18,8 @@ const PersonalCard = () => {
         <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 bg-clip-text text-transparent">
           Naval Bihani
         </h1>
-        <p className="text-lg text-gray-300 mb-4">Backend Engineer & Cloud Architect</p>
-        <p className="text-sm text-gray-400 mb-6">Building systems. Solving problems. Writing code.</p>
+        <p className="text-lg text-gray-300 mb-2">Full Stack Developer</p>
+        <p className="text-sm text-gray-400 mb-4">Backend Systems | Cloud-Native Engineering</p>
 
         {/* Quick Stats */}
         <div className="grid grid-cols-2 gap-4 mb-6 w-full">
@@ -43,6 +43,10 @@ const PersonalCard = () => {
             <Mail className="h-4 w-4" />
             <span>navalbihani15@gmail.com</span>
           </div>
+          <div className="flex items-center justify-center space-x-2">
+            <Phone className="h-4 w-4" />
+            <span>+91 7032235171</span>
+          </div>
         </div>
 
         {/* Social Links */}
@@ -54,6 +58,10 @@ const PersonalCard = () => {
           <a href="https://linkedin.com/in/navalbihani15" target="_blank" rel="noopener noreferrer"
              className="p-2 bg-gray-700/50 rounded-lg hover:bg-gray-600/50 transition-colors">
             <Linkedin className="h-5 w-5" />
+          </a>
+          <a href="https://leetcode.com/u/navalbihani15" target="_blank" rel="noopener noreferrer"
+             className="p-2 bg-gray-700/50 rounded-lg hover:bg-gray-600/50 transition-colors">
+            <Code2 className="h-5 w-5" />
           </a>
         </div>
       </div>

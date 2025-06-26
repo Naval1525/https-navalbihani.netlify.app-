@@ -1,10 +1,13 @@
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Terminal } from 'lucide-react';
 import PersonalCard from '../components/PersonalCard';
 import AboutCard from '../components/AboutCard';
 import ExperienceCard from '../components/ExperienceCard';
-import SkillsCard from '../components/SkillsCard';
+import LanguagesCard from '../components/LanguagesCard';
+import BackendCard from '../components/BackendCard';
+import DatabaseCard from '../components/DatabaseCard';
+import CloudCard from '../components/CloudCard';
 import ProjectsCard from '../components/ProjectsCard';
 import LeetCodeCard from '../components/LeetCodeCard';
 import ServicesCard from '../components/ServicesCard';
@@ -29,45 +32,60 @@ const Index = () => {
 
       {/* Bento Grid Layout */}
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 auto-rows-auto">
           {/* Personal Card - Large */}
-          <div className="lg:col-span-2 lg:row-span-2">
+          <div className="lg:col-span-2 lg:row-span-3">
             <PersonalCard />
           </div>
 
           {/* About Card */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 lg:row-span-2">
             <AboutCard />
           </div>
 
-          {/* Skills Card */}
-          <div className="lg:col-span-1">
-            <SkillsCard />
-          </div>
-
           {/* LeetCode Card */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2 lg:row-span-1">
             <LeetCodeCard />
           </div>
 
-          {/* Experience Card - Wide */}
-          <div className="lg:col-span-3">
+          {/* Languages Card */}
+          <div className="lg:col-span-2 lg:row-span-2">
+            <LanguagesCard />
+          </div>
+
+          {/* Backend Card */}
+          <div className="lg:col-span-2 lg:row-span-1">
+            <BackendCard />
+          </div>
+
+          {/* Experience Card */}
+          <div className="lg:col-span-2 lg:row-span-2">
             <ExperienceCard />
           </div>
 
-          {/* Contact Card */}
-          <div className="lg:col-span-1 lg:row-span-2">
-            <ContactCard />
+          {/* Database Card */}
+          <div className="lg:col-span-2 lg:row-span-1">
+            <DatabaseCard />
+          </div>
+
+          {/* Cloud Card */}
+          <div className="lg:col-span-2 lg:row-span-1">
+            <CloudCard />
           </div>
 
           {/* Projects Card - Large */}
-          <div className="lg:col-span-2 lg:row-span-2">
+          <div className="lg:col-span-3 lg:row-span-2">
             <ProjectsCard />
           </div>
 
           {/* Services Card */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 lg:row-span-1">
             <ServicesCard />
+          </div>
+
+          {/* Contact Card */}
+          <div className="lg:col-span-2 lg:row-span-1">
+            <ContactCard />
           </div>
         </div>
       </div>
