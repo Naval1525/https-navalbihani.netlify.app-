@@ -97,7 +97,7 @@ const Contact = () => {
             <div className="bg-black/20 backdrop-blur-md border border-purple-500/20 rounded-lg p-6 mb-8">
               <div className="text-center mb-6">
                 <div className="text-green-400 font-mono text-sm mb-2">
-                  > contact
+                  {'> contact'}
                 </div>
                 <div className="text-gray-300">
                   Drop me a message below.
