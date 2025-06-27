@@ -1,4 +1,3 @@
-
 import { Mail, Phone, MapPin, Github, Linkedin, MessageSquare, Send } from 'lucide-react';
 import { useState } from 'react';
 
@@ -88,8 +87,7 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
               <p className="text-gray-300 mb-8">
-                Whether you're looking for a backend engineer, need help with system design, 
-                or want DSA tutoring, I'd love to hear from you. Let's build something amazing together!
+                Whether you're looking for a backend engineer or need help with system design, I'd love to hear from you. Let's build something amazing together!
               </p>
             </div>
 

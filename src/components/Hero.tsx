@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Terminal, Code, Database, Cloud } from 'lucide-react';
 
@@ -104,7 +103,7 @@ const Hero = () => {
         <div className="flex justify-center space-x-8 mb-12">
           <div className="flex items-center space-x-2 text-green-400">
             <Code className="h-6 w-6" />
-            <span>700+ LeetCode</span>
+            <span>814 LeetCode</span>
           </div>
           <div className="flex items-center space-x-2 text-gray-400">
             <Database className="h-6 w-6" />

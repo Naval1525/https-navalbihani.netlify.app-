@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, Globe } from 'lucide-react';
 
 const Projects = () => {
@@ -6,7 +5,7 @@ const Projects = () => {
     {
       title: "Hirees.com",
       description: "A comprehensive job platform with real-time notifications, advanced search filters, and MongoDB backend. Features include job posting, application tracking, and live notifications system.",
-      image: "/placeholder.svg",
+      image: "/projects/hirees.png",
       technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Express"],
       liveUrl: "https://hirees.com",
       githubUrl: "#",
@@ -21,7 +20,7 @@ const Projects = () => {
     {
       title: "Virtual Venture",
       description: "Stock market simulation platform with live market APIs, portfolio tracking, and trading features. Built with React frontend and Node.js backend with real-time data integration.",
-      image: "/placeholder.svg",
+      image: "/projects/virtualventure.png",
       technologies: ["React", "Node.js", "Stock APIs", "Chart.js", "PostgreSQL"],
       liveUrl: "https://virtual-ventures.netlify.app",
       githubUrl: "#",
@@ -36,7 +35,7 @@ const Projects = () => {
     {
       title: "AI Email",
       description: "One-click AI-powered email reply system using OpenAI API. Handles 500+ responses per day with intelligent context understanding and professional tone matching.",
-      image: "/placeholder.svg",
+      image: "/projects/aiemail.png",
       technologies: ["React", "OpenAI API", "Node.js", "Express", "MongoDB"],
       liveUrl: "https://ai-email-frontend-taupe.vercel.app",
       githubUrl: "#",
@@ -49,9 +48,54 @@ const Projects = () => {
       color: "from-purple-400 to-pink-400"
     },
     {
+      title: "UI Library",
+      description: "A reusable UI component library for rapid development and consistent design across projects.",
+      image: "/projects/uilibrary.png",
+      technologies: ["React", "TypeScript", "Storybook", "Design System"],
+      liveUrl: "https://astonishing-arithmetic-d5066a.netlify.app/",
+      githubUrl: "#",
+      features: [
+        "Reusable components",
+        "Customizable themes",
+        "Accessible design",
+        "Storybook documentation"
+      ],
+      color: "from-pink-400 to-purple-400"
+    },
+    {
+      title: "Assetosphere",
+      description: "Track bills, get reminders for warranties/service, explore insurance options, and manage everything in a Notion-like workspace.",
+      image: "/projects/assestophere.png",
+      technologies: ["React", "Node.js", "Reminders", "Insurance", "Workspace"],
+      liveUrl: "https://exquisite-torrone-a8a249.netlify.app/",
+      githubUrl: "#",
+      features: [
+        "Track warranties and bills",
+        "Timely reminders",
+        "Insurance marketplace",
+        "Workspace for all assets"
+      ],
+      color: "from-blue-400 to-indigo-400"
+    },
+    {
+      title: "Workspace",
+      description: "A Notion-like productivity platform for organizing notes, tasks, and projects in a collaborative workspace.",
+      image: "/projects/workspace.png",
+      technologies: ["React", "Node.js", "Collaboration", "Productivity"],
+      liveUrl: "#",
+      githubUrl: "#",
+      features: [
+        "Notion-like interface",
+        "Real-time collaboration",
+        "Task and note management",
+        "Customizable workspace"
+      ],
+      color: "from-purple-400 to-blue-400"
+    },
+    {
       title: "Krishi Krew",
       description: "AI and weather-powered agricultural recommendation system for farmers. Provides crop recommendations, weather insights, and farming guidance using machine learning.",
-      image: "/placeholder.svg",
+      image: "/projects/krishikrew.png",
       technologies: ["Python", "ML Models", "Weather API", "React", "Django"],
       liveUrl: "#",
       githubUrl: "#",
@@ -64,24 +108,9 @@ const Projects = () => {
       color: "from-green-400 to-yellow-400"
     },
     {
-      title: "DevFlow",
-      description: "Developer Q&A platform similar to Stack Overflow, built with full-stack technologies. Features question posting, answering, voting system, and reputation tracking.",
-      image: "/placeholder.svg",
-      technologies: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS"],
-      liveUrl: "#",
-      githubUrl: "#",
-      features: [
-        "Q&A system",
-        "Voting mechanism",
-        "Reputation tracking",
-        "Code syntax highlighting"
-      ],
-      color: "from-blue-400 to-indigo-400"
-    },
-    {
       title: "Connex",
       description: "Social media platform clone focused on privacy, user experience, and real-time chat features. Built with modern full-stack technologies and optimized for performance.",
-      image: "/placeholder.svg",
+      image: "/projects/connex.png",
       technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Redis"],
       liveUrl: "#",
       githubUrl: "#",
@@ -92,6 +121,21 @@ const Projects = () => {
         "User profiles"
       ],
       color: "from-pink-400 to-red-400"
+    },
+    {
+      title: "DevFlow",
+      description: "Developer Q&A platform similar to Stack Overflow, built with full-stack technologies. Features question posting, answering, voting system, and reputation tracking.",
+      image: "/projects/devflow.png",
+      technologies: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS"],
+      liveUrl: "https://devflow-1.onrender.com/",
+      githubUrl: "#",
+      features: [
+        "Q&A system",
+        "Voting mechanism",
+        "Reputation tracking",
+        "Code syntax highlighting"
+      ],
+      color: "from-blue-400 to-indigo-400"
     }
   ];
 

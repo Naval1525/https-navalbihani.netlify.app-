@@ -1,4 +1,3 @@
-
 import { MapPin, Mail, Phone, Github, Linkedin, Code2 } from 'lucide-react';
 
 const PersonalCard = () => {
@@ -24,7 +23,7 @@ const PersonalCard = () => {
         {/* Quick Stats */}
         <div className="grid grid-cols-2 gap-4 mb-6 w-full">
           <div className="text-center">
-            <div className="text-xl font-bold text-green-400">700+</div>
+            <div className="text-xl font-bold text-green-400">814</div>
             <div className="text-xs text-gray-400">LeetCode Problems</div>
           </div>
           <div className="text-center">

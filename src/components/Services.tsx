@@ -1,4 +1,3 @@
-
 import { Code, Server, Cloud, Database, Users, Zap } from 'lucide-react';
 
 const Services = () => {
@@ -37,13 +36,6 @@ const Services = () => {
       icon: <Database className="h-12 w-12" />,
       features: ["PostgreSQL", "MongoDB", "Redis", "Query Optimization"],
       color: "from-red-400 to-orange-400"
-    },
-    {
-      title: "DSA Tutoring & Mentoring",
-      description: "1:1 or group coaching for competitive programming, interview preparation, and algorithmic thinking.",
-      icon: <Users className="h-12 w-12" />,
-      features: ["LeetCode Guidance", "Interview Prep", "Algorithm Design", "Problem Solving"],
-      color: "from-orange-400 to-yellow-400"
     }
   ];
 

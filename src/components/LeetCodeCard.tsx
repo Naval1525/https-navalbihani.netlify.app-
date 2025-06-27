@@ -1,4 +1,3 @@
-
 import { Trophy } from 'lucide-react';
 
 const LeetCodeCard = () => {
@@ -11,7 +10,7 @@ const LeetCodeCard = () => {
       <div className="space-y-2">
         <div className="flex justify-between">
           <span className="text-gray-400">Problems:</span>
-          <span className="text-green-400 font-bold">700+</span>
+          <span className="text-green-400 font-bold">814</span>
         </div>
         <div className="flex justify-between">
           <span className="text-gray-400">Rating:</span>

@@ -1,18 +1,17 @@
-
 import { Code2, Trophy, Target, TrendingUp } from 'lucide-react';
 
 const LeetCodeStats = () => {
   const stats = [
-    { label: 'Problems Solved', value: '700+', icon: Code2, color: 'text-green-400' },
+    { label: 'Problems Solved', value: '814', icon: Code2, color: 'text-green-400' },
     { label: 'Current Rating', value: '1800+', icon: Trophy, color: 'text-yellow-400' },
     { label: 'Contest Rank', value: 'Knight', icon: Target, color: 'text-purple-400' },
     { label: 'Weekly Contests', value: 'Regular', icon: TrendingUp, color: 'text-blue-400' }
   ];
 
   const problemStats = [
-    { difficulty: 'Easy', solved: 250, total: 800, percentage: 31 },
-    { difficulty: 'Medium', solved: 380, total: 1650, percentage: 23 },
-    { difficulty: 'Hard', solved: 70, total: 700, percentage: 10 }
+    { difficulty: 'Easy', solved: 304, total: 883, percentage: Math.round((304/883)*100) },
+    { difficulty: 'Medium', solved: 450, total: 1868, percentage: Math.round((450/1868)*100) },
+    { difficulty: 'Hard', solved: 60, total: 845, percentage: Math.round((60/845)*100) }
   ];
 
   return (
@@ -77,19 +76,7 @@ const LeetCodeStats = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-12 text-center">
-          <p className="text-gray-300 mb-6 text-lg">
-            Want to improve your problem-solving skills? I offer DSA tutoring and interview preparation.
-          </p>
-          <a
-            href="https://leetcode.com/u/navalbihani15"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-3 rounded-lg font-medium hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
-          >
-            View My LeetCode Profile
-          </a>
-        </div>
+        {/* Removed DSA tutoring CTA as per user request */}
       </div>
     </div>
   );
